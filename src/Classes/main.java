@@ -20,10 +20,10 @@ public class main {
         prueba.Insert("Brenda", "Monte", 2);
         prueba.Insert("Andres", "EDD", 3);
         prueba.Insert("Juan", "Caballo", 4);
-        System.out.println("ANTES:");
-        System.out.println(prueba.Print());
+        //System.out.println("ANTES:");
+        //System.out.println(prueba.Print());
         Clients encontrado = prueba.Search("Gonzalo", "Perez");
-        System.out.println(encontrado.habitacion);
+        //System.out.println(encontrado.habitacion);
         
     }
 }
