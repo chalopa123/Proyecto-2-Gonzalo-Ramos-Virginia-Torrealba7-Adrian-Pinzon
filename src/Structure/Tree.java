@@ -10,43 +10,26 @@ package Structure;
  */
 public class Tree {
     
-        /**
-     * The root node of the binary tree.
-     */
-    Node pRoot;
+   
+    Nodo pRoot;
 
-    /**
-     * Constructs an empty binary tree.
-     */
+   
     public Tree() {
         this.pRoot = null;
     }
 
-    /**
-     * Returns the root node of the binary tree.
-     *
-     * @return the root node of the binary tree
-     */
-    public Node getpRoot() {
+   
+    public Nodo getpRoot() {
         return pRoot;
     }
 
-    /**
-     * Sets the root node of the binary tree.
-     *
-     * @param pRoot the root node of the binary tree to set
-     */
-    public void setpRoot(Node pRoot) {
+   
+    public void setpRoot(Nodo pRoot) {
         this.pRoot = pRoot;
     }
 
-    /**
-     * Inserts a new node into the binary tree.
-     *
-     * @param pRoot the root node of the binary tree
-     * @param aux the node to be inserted
-     */
-    public void insert(Node pRoot, Node aux) {
+  
+    public void insert(Nodo pRoot, Nodo aux) {
         if (this.pRoot == null) {
             this.pRoot = aux;
         } else {
@@ -71,14 +54,8 @@ public class Tree {
 
     }
 
-    /**
-     * Searches for a node with the specified data in the binary tree.
-     *
-     * @param aux the current node being checked
-     * @param data the data to search for
-     * @return the node with the specified data, or null if not found
-     */
-    public Node search(Node aux, int data) {
+ 
+    public Nodo search(Nodo aux, int data) {
         if (aux == null) {
             return null;
         }
@@ -93,12 +70,8 @@ public class Tree {
 
     }
 
-    /**
-     * Performs an in-order traversal of the binary tree.
-     *
-     * @param root the current root node
-     */
-    public void inOrder(Node root) {
+  
+    public void inOrder(Nodo root) {
         if (root != null) {
             inOrder(root.getLeft());
             User u = (User) root.getDato();
@@ -106,12 +79,7 @@ public class Tree {
         }
     }
 
-    /**
-     * Performs a pre-order traversal of the binary tree.
-     *
-     * @param root the current root node
-     */
-    public void preOrder(Node root) {
+    public void preOrder(Nodo root) {
         if (root != null) {
             ;
             preOrder(root.getLeft());
@@ -119,12 +87,8 @@ public class Tree {
         }
     }
 
-    /**
-     * Performs a post-order traversal of the binary tree.
-     *
-     * @param root the current root node
-     */
-    public void postOrder(Node root) {
+   
+    public void postOrder(Nodo root) {
         if (root != null) {
             postOrder(root.getLeft());
             postOrder(root.getRight());
