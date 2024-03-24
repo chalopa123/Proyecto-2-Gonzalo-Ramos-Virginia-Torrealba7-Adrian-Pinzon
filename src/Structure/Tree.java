@@ -8,6 +8,9 @@ package Structure;
  *
  * @author VirginiaT
  */
+
+// Clase Tree
+
 public class Tree {
     
    
