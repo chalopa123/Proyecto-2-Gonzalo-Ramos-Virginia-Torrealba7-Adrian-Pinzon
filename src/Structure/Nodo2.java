@@ -9,6 +9,9 @@ package Structure;
  * @author VirginiaT
  */
 
+// Estructura Nodo_2
+// Complementar Nodo Principal
+
 public class Nodo2 <T> {
     
     T dato;
