@@ -8,6 +8,9 @@ package Classes;
  *
  * @author VirginiaT
  */
+
+// Clase Bedroom
+
 public class Bedroom {
     
     
