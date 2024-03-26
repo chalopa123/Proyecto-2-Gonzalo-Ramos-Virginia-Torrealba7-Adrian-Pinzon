@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Structure;
+package TreeBinario;
+
+import Structure.Nodo;
 
 /**
  *
@@ -35,16 +37,17 @@ public class Tree {
     public void insert(Nodo pRoot, Nodo aux) {
         if (this.pRoot == null) {
             this.pRoot = aux;
+            
         } else {
-            User u = (User) aux.getDato();
-            User p = (User) pRoot.getDato();
-            if (u.getDni() < p.getDni()) {
+            Clientes2 c = (Clientes2) aux.getDato();
+            Clientes2 c2 = (Clientes2) pRoot.getDato();
+            if (c.getDni() < c2.getDni()) {
                 if (pRoot.getIzq() == null) {
                     pRoot.setIzq(aux);
                 } else {
                     insert(pRoot.getIzq(), aux);
                 }
-            } else if (u.getDni() > p.getDni()) {
+            } else if (c.getDni() > c2.getDni()) {
                 if (pRoot.getDer() == null) {
                     pRoot.setDer(aux);
                 } else {
@@ -77,7 +80,7 @@ public class Tree {
     public void inOrder(Nodo root) {
         if (root != null) {
             inOrder(root.getIzq());
-            User u = (User) root.getDato();
+            Clientes2 c = (Clientes2) root.getDato();
             inOrder(root.getDer());
         }
     }
