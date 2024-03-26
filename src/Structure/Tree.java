@@ -39,16 +39,16 @@ public class Tree {
             User u = (User) aux.getDato();
             User p = (User) pRoot.getDato();
             if (u.getDni() < p.getDni()) {
-                if (pRoot.getLeft() == null) {
-                    pRoot.setLeft(aux);
+                if (pRoot.getIzq() == null) {
+                    pRoot.setIzq(aux);
                 } else {
-                    insert(pRoot.getLeft(), aux);
+                    insert(pRoot.getIzq(), aux);
                 }
             } else if (u.getDni() > p.getDni()) {
-                if (pRoot.getRight() == null) {
-                    pRoot.setRight(aux);
+                if (pRoot.getDer() == null) {
+                    pRoot.setDer(aux);
                 } else {
-                    insert(pRoot.getRight(), aux);
+                    insert(pRoot.getDer(), aux);
                 }
             } else {
                 System.out.println("El elemento ya se encuentra en el Árbol");
@@ -66,9 +66,9 @@ public class Tree {
         if ((int) aux.getDato() == data) {
             return aux;
         } else if (data < (int) aux.getDato()) {
-            return search(aux.getLeft(), data);
+            return search(aux.getIzq(), data);
         } else {
-            return search(aux.getRight(), data);
+            return search(aux.getDer(), data);
         }
 
     }
@@ -76,25 +76,25 @@ public class Tree {
   
     public void inOrder(Nodo root) {
         if (root != null) {
-            inOrder(root.getLeft());
+            inOrder(root.getIzq());
             User u = (User) root.getDato();
-            inOrder(root.getRight());
+            inOrder(root.getDer());
         }
     }
 
     public void preOrder(Nodo root) {
         if (root != null) {
             ;
-            preOrder(root.getLeft());
-            preOrder(root.getRight());
+            preOrder(root.getIzq());
+            preOrder(root.getDer());
         }
     }
 
    
     public void postOrder(Nodo root) {
         if (root != null) {
-            postOrder(root.getLeft());
-            postOrder(root.getRight());
+            postOrder(root.getIzq());
+            postOrder(root.getDer());
             System.out.print(root.getDato() + ",");
         }
     }

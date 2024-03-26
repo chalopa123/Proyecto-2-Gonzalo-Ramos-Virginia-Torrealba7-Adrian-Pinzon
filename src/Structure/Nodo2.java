@@ -17,16 +17,16 @@ public class Nodo2 <T> {
     T dato;
     
     
-    Nodo2 left;
+    Nodo2 izq;
     
     
-    Nodo2 right;
+    Nodo2 der;
 
    
     public Nodo2(T dato) {
         this.dato = dato;
-        this.right = null;
-        this.left = null;
+        this.der = null;
+        this.izq = null;
     }
 
   
@@ -40,28 +40,28 @@ public class Nodo2 <T> {
     }
 
     
-    public Nodo2 getLeft() {
-        return left;
+    public Nodo2 getIzq() {
+        return izq;
     }
 
     
-    public void setLeft(Nodo2 left) {
-        this.left = left;
+    public void setIzq(Nodo2 izq) {
+        this.izq = izq;
     }
 
     
-    public Nodo2 getRight() {
-        return right;
+    public Nodo2 getDer() {
+        return der;
     }
 
     
-    public void setRight(Nodo2 right) {
-        this.right = right;
+    public void setDer(Nodo2 der) {
+        this.der = der;
     }
 
     
     public boolean isLeaf() {
-        return (this.left == null && this.right == null);
+        return (this.izq == null && this.der == null);
     }
     
 }
