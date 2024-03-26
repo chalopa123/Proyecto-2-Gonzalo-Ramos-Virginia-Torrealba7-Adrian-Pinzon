@@ -4,7 +4,7 @@
  */
 package TreeBinario;
 
-import Structure.Nodo;
+import Classes.Clientes2;
 
 /**
  *
@@ -16,7 +16,7 @@ import Structure.Nodo;
 public class Tree {
     
    
-    Nodo pRoot;
+    Nodo2 pRoot;
 
    
     public Tree() {
@@ -24,17 +24,17 @@ public class Tree {
     }
 
    
-    public Nodo getpRoot() {
+    public Nodo2 getpRoot() {
         return pRoot;
     }
 
    
-    public void setpRoot(Nodo pRoot) {
+    public void setpRoot(Nodo2 pRoot) {
         this.pRoot = pRoot;
     }
 
   
-    public void insert(Nodo pRoot, Nodo aux) {
+    public void insert(Nodo2 pRoot, Nodo2 aux) {
         if (this.pRoot == null) {
             this.pRoot = aux;
             
@@ -61,7 +61,7 @@ public class Tree {
     }
 
  
-    public Nodo search(Nodo aux, int data) {
+    public Nodo2 search(Nodo2 aux, int data) {
         if (aux == null) {
             return null;
         }
@@ -77,7 +77,7 @@ public class Tree {
     }
 
   
-    public void inOrder(Nodo root) {
+    public void inOrder(Nodo2 root) {
         if (root != null) {
             inOrder(root.getIzq());
             Clientes2 c = (Clientes2) root.getDato();
@@ -85,7 +85,7 @@ public class Tree {
         }
     }
 
-    public void preOrder(Nodo root) {
+    public void preOrder(Nodo2 root) {
         if (root != null) {
             ;
             preOrder(root.getIzq());
@@ -94,7 +94,7 @@ public class Tree {
     }
 
    
-    public void postOrder(Nodo root) {
+    public void postOrder(Nodo2 root) {
         if (root != null) {
             postOrder(root.getIzq());
             postOrder(root.getDer());
