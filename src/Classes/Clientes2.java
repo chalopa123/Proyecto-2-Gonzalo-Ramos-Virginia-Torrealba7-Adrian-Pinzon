@@ -8,6 +8,10 @@ package Classes;
  *
  * @author VirginiaT
  */
+
+// Estructura Clientes_2
+// Complementar Clientes Principal
+
 public class Clientes2 {
     
     private int dni;
