@@ -13,6 +13,16 @@ import Classes.Clientes2;
 
 // Clase Tree
 
+/**
+ * 
+ * @author VirginiaT
+ * 
+ * La clase Tree representa un árbol binario de búsqueda, que permite insertar nodos, búsqueda de nodos
+ * y realizar sus respectivos recorridos ingresando a través de su nodo Raíz .
+ *
+ * Entre sus recorridos están Pre-Orden, In-Orden y Post-Orden del
+ */
+
 public class Tree {
     
    
