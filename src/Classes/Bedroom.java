@@ -4,6 +4,8 @@
  */
 package Classes;
 
+import TreeBinario.Tree;
+
 /**
  *
  * @author VirginiaT
