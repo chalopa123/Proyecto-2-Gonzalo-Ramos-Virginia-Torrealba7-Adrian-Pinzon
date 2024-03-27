@@ -4,34 +4,95 @@
  */
 package Structure;
 
+import Classes.Clientes2;
+
 /**
  *
  * @author eduardopinzon
  */
 public class Reservation {
     
-    public Nodo insert(int element, Nodo root, Nodo father){
-        
-      Nodo node = new Nodo(element);
-      if (isEmpty()){
-          setRoot(node);
-      } else {
-          if (element < root.getElement()){
-              root.setLeftSon(insert(element,root.getLeftSon(), root));
-          } else{
-              root.setRightSon(insert(element,root.getRightSon(), root));
-          }
-      }
-       return root; 
+    /**
+     * User information of the reservation.
+     */
+    private Clientes2 user;
+    /**
+     * Type of the room: Simple, double, triple, suite.
+     */
+    private String type;
+
+    // <editor-fold defaultstate="collapsed" desc="Constructor">   
+    /**
+     * Constructs a new Reservation object.
+     *
+     * @param user the user associated with the reservation
+     * @param type the type of the room
+     */
+    public Reservation(Clientes2 user, String type) {
+        this.user = user;
+        this.type = type;
+    }
+    // </editor-fold>  
+
+    // <editor-fold defaultstate="collapsed" desc="User">   
+    /**
+     * Returns the user associated with the reservation.
+     *
+     * @return the user associated with the reservation
+     */
+    public Clientes2 getUser() {
+        return user;
     }
 
-    private boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    /**
+     * Sets the user associated with the reservation.
+     *
+     * @param user the user to set
+     */
+    public void setUser(Clientes2 user) {
+        this.user = user;
+    }
+    // </editor-fold>  
+
+    // <editor-fold defaultstate="collapsed" desc="Type">   
+    /**
+     * Returns the type of the room.
+     *
+     * @return the type of the room
+     */
+    public String getType() {
+        return type;
     }
 
-    private void setRoot(Nodo node) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    /**
+     * Sets the type of the room.
+     *
+     * @param type the type of the room to set
+     */
+    public void setType(String type) {
+        this.type = type;
     }
-    
-    
+    // </editor-fold> 
+
+    // <editor-fold defaultstate="collapsed" desc="FUNCIÓN: Buscar reservación">   
+    /**
+     * Returns the DNI (identification number) of the user associated with the
+     * reservation.
+     *
+     * @return the DNI of the user
+     */
+    public int getDni() {
+        return user.getDni();
+    }
+    // </editor-fold>  
+
+    // <editor-fold defaultstate="collapsed" desc="Show">   
+    /**
+     * Displays the reservation details.
+     */
+    public void show() {
+        System.out.println(user.getDni());
+        user.show();
+    }
+    // </editor-fold> 
 }
