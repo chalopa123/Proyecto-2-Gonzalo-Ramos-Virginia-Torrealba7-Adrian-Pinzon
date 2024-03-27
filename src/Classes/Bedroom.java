@@ -23,7 +23,11 @@ public class Bedroom {
     private boolean occupied;
     
     private Tree tree;
-
+    
+    /**
+     * @param type the type of the bedroom
+     * @param floor the floor number where the bedroom is located
+     */
   
     public Bedroom(String type, int floor) {
         this.type = type;
