@@ -37,17 +37,22 @@ public class Clientes2 {
     private String phone;
 
     // Hotel information
+    
+    
     /**
-     * ? of the person
+     * Fecha de la llegada de la persona
      */
+    
     private String ride;
+    
+    
     /**
-     * ? of the person
+     * Fecha de la salida de la persona
      */
+    
     private String departure;
-    /**
-     * ? of the person
-     */
+    
+    
     private int num;
 
     
@@ -70,10 +75,12 @@ public class Clientes2 {
 
     }
     
+    
     public String getPhone() {
         return phone;
     }
 
+    
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -87,6 +94,7 @@ public class Clientes2 {
     public void setName(String name) {
         this.name = name;
     }
+    
     
     public String getLast_name() {
         return last_name;
@@ -107,6 +115,7 @@ public class Clientes2 {
         this.gender = gener;
     }
   
+    
     public String getEmail() {
         return email;
     }
@@ -116,15 +125,19 @@ public class Clientes2 {
         this.email = email;
     }
     
+    
     public int getDni() {
         return dni;
     }
-
+    
+    
     /**
      * Sets the user's identification number.
      *
      * @param dni The identification number to set.
      */
+    
+    
     public void setDni(int dni) {
         this.dni = dni;
     }
@@ -159,8 +172,7 @@ public class Clientes2 {
         this.num = num;
     }
     
-
-   
+    
     public void show() {
         String sentence = this.name + " | " + this.last_name + " | " + this.gender + " | " + this.email + " | " + this.phone;
         System.out.println(sentence);
