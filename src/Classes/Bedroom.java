@@ -25,8 +25,8 @@ public class Bedroom {
     private Tree tree;
     
     /**
-     * @param type the type of the bedroom
-     * @param floor the floor number where the bedroom is located
+     * @param type estilo de la habitación.
+     * @param floor el número de piso donde está localizada la habitación
      */
   
     public Bedroom(String type, int floor) {
