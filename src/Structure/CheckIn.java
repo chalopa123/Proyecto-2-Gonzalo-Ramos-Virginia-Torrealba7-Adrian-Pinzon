@@ -11,17 +11,18 @@ import Structure.Reservation;
  * @author eduardopinzon
  */
 public class CheckIn {
-    private Reservation[][] guestsRegister;
+    private String[][] guestsRegister;
     private int index;
     
     public CheckIn(int size){
-        this.guestsRegister = new Reservation[size][2];
+        this.guestsRegister = new String[size][2];
         this.index = 0;
     }
     
     public void Registrar(String reservationId, String roomId){
         if (index < guestsRegister.length) {
-            
+            guestsRegister[index][0] = reservationId;
+            guestsRegister[index][1] = roomId;
         }
     }
 
