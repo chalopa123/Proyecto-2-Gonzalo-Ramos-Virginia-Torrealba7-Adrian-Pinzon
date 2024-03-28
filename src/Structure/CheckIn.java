@@ -16,6 +16,7 @@ public class CheckIn {
     
     public CheckIn(int size){
         this.guestsRegister = new String[size][2];
+        this.index = 0;
     }
 
 }
