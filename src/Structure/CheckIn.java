@@ -11,11 +11,11 @@ import Structure.Reservation;
  * @author eduardopinzon
  */
 public class CheckIn {
-    private String[][] guestsRegister;
+    private Reservation[][] guestsRegister;
     private int index;
     
     public CheckIn(int size){
-        this.guestsRegister = new String[size][2];
+        this.guestsRegister = new Reservation[size][2];
         this.index = 0;
     }
 
