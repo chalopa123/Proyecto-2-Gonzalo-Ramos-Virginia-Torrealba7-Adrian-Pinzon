@@ -86,20 +86,21 @@ public class Tree {
 
     }
 
-  
-    public void inOrder(Nodo2 root) {
-        if (root != null) {
-            inOrder(root.getIzq());
-            Clientes2 c = (Clientes2) root.getDato();
-            inOrder(root.getDer());
-        }
-    }
 
     public void preOrder(Nodo2 root) {
         if (root != null) {
             ;
             preOrder(root.getIzq());
             preOrder(root.getDer());
+        }
+    }
+    
+    
+    public void inOrder(Nodo2 root) {
+        if (root != null) {
+            inOrder(root.getIzq());
+            Clientes2 c = (Clientes2) root.getDato();
+            inOrder(root.getDer());
         }
     }
 
@@ -109,6 +110,25 @@ public class Tree {
             postOrder(root.getIzq());
             postOrder(root.getDer());
             System.out.print(root.getDato() + ",");
+        }
+    }
+    
+    
+    /**
+     * Muestra el historial del Tree Binario.
+     *
+     * @param root el nodo raíz actual.
+     */
+    
+    public void showHistorial(Nodo2 root) {
+        if (root != null) {
+            showHistorial(root.getIzq());
+            Clientes2 u = (Clientes2) root.getDato();
+            
+            Clientes2 user_aux = u;
+            ShowHistorial showh = new ShowHistorial(user_aux);
+            
+            showHistorial(root.getDer());
         }
     }
     
