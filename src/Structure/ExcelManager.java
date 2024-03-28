@@ -5,6 +5,7 @@
 
 package Structure;
 
+
 /**
  *
  * @author Admin
@@ -14,7 +15,6 @@ package Structure;
 import Classes.Bedroom;
 import Classes.Clientes2;
 import TreeBinario.Nodo2;
-import Structure.Reservation;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

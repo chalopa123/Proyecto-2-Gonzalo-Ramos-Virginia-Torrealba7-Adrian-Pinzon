@@ -9,6 +9,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package Utilidad;
 
 import javax.swing.JOptionPane;
@@ -17,6 +19,8 @@ import javax.swing.JOptionPane;
  *
  * @author Admin
  */
+
+
 public class Errors {
      /**
      * Displays an error message for invalid input.
