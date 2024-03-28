@@ -18,5 +18,9 @@ public class CheckIn {
         this.guestsRegister = new Reservation[size][2];
         this.index = 0;
     }
+    
+    public void Registrar(String reservationId, String roomId){
+        
+    }
 
 }
