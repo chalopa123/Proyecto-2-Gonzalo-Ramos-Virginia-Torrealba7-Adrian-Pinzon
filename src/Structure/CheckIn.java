@@ -20,7 +20,9 @@ public class CheckIn {
     }
     
     public void Registrar(String reservationId, String roomId){
-        
+        if (index < guestsRegister.length) {
+            
+        }
     }
 
 }
