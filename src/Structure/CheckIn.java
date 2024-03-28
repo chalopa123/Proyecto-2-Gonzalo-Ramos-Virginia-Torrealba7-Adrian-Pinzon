@@ -13,5 +13,9 @@ import Structure.Reservation;
 public class CheckIn {
     private String[][] guestsRegister;
     private int index;
+    
+    public CheckIn(int size){
+        
+    }
 
 }
