@@ -23,6 +23,8 @@ public class CheckIn {
         if (index < guestsRegister.length) {
             guestsRegister[index][0] = reservationId;
             guestsRegister[index][1] = roomId;
+            System.out.println("Check-in completado. Habitacion " + roomId + " asignada a la reservacion " + reservationId);
+            index ++;
         }
     }
 
