@@ -25,6 +25,8 @@ public class CheckIn {
             guestsRegister[index][1] = roomId;
             System.out.println("Check-in completado. Habitacion " + roomId + " asignada a la reservacion " + reservationId);
             index ++;
+        } else {
+            System.out.println("Hotel is full. Cannot check-in.");
         }
     }
 
