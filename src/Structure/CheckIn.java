@@ -7,10 +7,13 @@ package Structure;
 
 import Structure.Reservation;
 
+
 /**
  *
  * @author eduardopinzon
  */
+
+
 public class CheckIn {
     private String[][] guestsRegister;
     private int index;
