@@ -11,6 +11,7 @@ package Utilidad;
 
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author Admin
@@ -18,6 +19,7 @@ import javax.swing.JOptionPane;
 
 
 public class Errors {
+    
      /**
      * Displays an error message for invalid input.
      */
