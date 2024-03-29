@@ -26,7 +26,7 @@ public class CheckIn {
             System.out.println("Check-in completado. Habitacion " + roomId + " asignada a la reservacion " + reservationId);
             index ++;
         } else {
-            System.out.println("Hotel is full. Cannot check-in.");
+            System.out.println("No hay habitaciones disponibles. No se puede hacer check-in.");
         }
     }
 
