@@ -9,8 +9,15 @@ package Classes;
  *
  * @author ramos
  */
+
+import Interfaz.Inicio;
+        
+        
+
 public class main {
     public static void main(String[] args) {
+        Inicio i = new Inicio();
+        i.setVisible(true);
        
     }
 }
