@@ -1,11 +1,8 @@
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Structure;
-
-import Structure.Reservation;
 
 
 /**
@@ -14,16 +11,16 @@ import Structure.Reservation;
  */
 
 
-public class CheckIn {
+public class Register {
     private String[][] guestsRegister;
     private int index;
     
-    public CheckIn(int size){
+    public Register(int size){
         this.guestsRegister = new String[size][2];
         this.index = 0;
     }
     
-    public void Registrar(String reservationId, String roomId){
+    public void checkIn(String reservationId, String roomId){
         if (index < guestsRegister.length) {
             guestsRegister[index][0] = reservationId;
             guestsRegister[index][1] = roomId;
@@ -33,5 +30,18 @@ public class CheckIn {
             System.out.println("No hay habitaciones disponibles. No se puede hacer check-in.");
         }
     }
-
+    public void checkOut(String reservationId) {
+        for (int i = 0; i < index; i++) {
+            if (guestsRegister[i][0].equals(reservationId)) {
+                System.out.println("Check-out completado para la reservación " + reservationId);
+                // Shift the remaining elements to the left
+                for (int j = i; j < index - 1; j++) {
+                    guestsRegister[j][0] = guestsRegister[j + 1][0];
+                    guestsRegister[j][1] = guestsRegister[j + 1][1];
+                }
+                index--;
+                return;
+            }    
+        }
+    }      
 }
