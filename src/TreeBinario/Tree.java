@@ -6,6 +6,8 @@ package TreeBinario;
 
 import Classes.Clientes2;
 
+import Interfaz.ShowHistorial;
+
 /**
  *
  * @author VirginiaT
