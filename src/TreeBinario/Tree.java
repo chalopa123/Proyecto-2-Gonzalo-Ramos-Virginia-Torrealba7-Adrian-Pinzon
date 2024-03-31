@@ -5,6 +5,7 @@
 package TreeBinario;
 
 import Classes.Clientes2;
+import gui.ShowHistorialGUI;
 
 /**
  *
@@ -75,6 +76,17 @@ public class Tree {
         }
 
     }
+    public void showHistorial(Nodo2 root) {
+        if (root != null) {
+            showHistorial(root.getIzq());
+            Clientes2 u = (Clientes2) root.getDato();
+            // =================================================================
+            Clientes2 user_aux = u;
+            ShowHistorialGUI gui = new ShowHistorialGUI(user_aux);
+            // =================================================================
+            showHistorial(root.getDer());
+        }
+    }
 
   
     public void inOrder(Nodo2 root) {
@@ -87,7 +99,7 @@ public class Tree {
 
     public void preOrder(Nodo2 root) {
         if (root != null) {
-            ;
+            
             preOrder(root.getIzq());
             preOrder(root.getDer());
         }
