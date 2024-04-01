@@ -8,16 +8,25 @@ package Classes;
 /**
  *
  * @author ramos
+ * 
+ * @author VirginiaT
+ * 
+ * 
  */
 
-import Interfaz.Inicio;
+//import Interfaz.Inicio;
+import app.App;
         
         
 
 public class main {
     public static void main(String[] args) {
-        Inicio i = new Inicio();
-        i.setVisible(true);
+        //Inicio i = new Inicio();
+        //i.setVisible(true);
+        
+        
+        App app = new App();
+        app.start();
        
     }
 }

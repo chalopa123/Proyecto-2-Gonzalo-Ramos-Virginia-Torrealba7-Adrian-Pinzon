@@ -49,12 +49,13 @@ public class MainGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         checkOut = new javax.swing.JButton();
         searchHosted = new javax.swing.JButton();
         searchReservation = new javax.swing.JButton();
         searchHistorialBedroom = new javax.swing.JButton();
         checkIn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,15 +63,8 @@ public class MainGUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(9, 35, 39));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 169, 165));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Booking system");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
-
         checkOut.setBackground(new java.awt.Color(144, 194, 231));
-        checkOut.setForeground(new java.awt.Color(11, 83, 81));
+        checkOut.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         checkOut.setText("ADMIN: Check-Out");
         checkOut.setFocusPainted(false);
         checkOut.setFocusable(false);
@@ -79,11 +73,11 @@ public class MainGUI extends javax.swing.JFrame {
                 checkOutActionPerformed(evt);
             }
         });
-        jPanel1.add(checkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 280, 30));
+        jPanel1.add(checkOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 280, 30));
 
         searchHosted.setBackground(new java.awt.Color(144, 194, 231));
-        searchHosted.setForeground(new java.awt.Color(11, 83, 81));
-        searchHosted.setText("CLIENTES: Ver clientes hopedados");
+        searchHosted.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        searchHosted.setText("CLIENTES: Ver Clientes Hospedados");
         searchHosted.setFocusPainted(false);
         searchHosted.setFocusable(false);
         searchHosted.addActionListener(new java.awt.event.ActionListener() {
@@ -91,11 +85,11 @@ public class MainGUI extends javax.swing.JFrame {
                 searchHostedActionPerformed(evt);
             }
         });
-        jPanel1.add(searchHosted, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 280, 30));
+        jPanel1.add(searchHosted, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 280, 30));
 
         searchReservation.setBackground(new java.awt.Color(144, 194, 231));
-        searchReservation.setForeground(new java.awt.Color(11, 83, 81));
-        searchReservation.setText("ADMIN: Buscar reservación");
+        searchReservation.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        searchReservation.setText("ADMIN: Buscar Reservación");
         searchReservation.setFocusPainted(false);
         searchReservation.setFocusable(false);
         searchReservation.addActionListener(new java.awt.event.ActionListener() {
@@ -103,11 +97,11 @@ public class MainGUI extends javax.swing.JFrame {
                 searchReservationActionPerformed(evt);
             }
         });
-        jPanel1.add(searchReservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 280, 30));
+        jPanel1.add(searchReservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 280, 30));
 
         searchHistorialBedroom.setBackground(new java.awt.Color(144, 194, 231));
-        searchHistorialBedroom.setForeground(new java.awt.Color(11, 83, 81));
-        searchHistorialBedroom.setText("ADMIN: Ver historial de una habitación");
+        searchHistorialBedroom.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        searchHistorialBedroom.setText("ADMIN: Ver historial de una Habitación");
         searchHistorialBedroom.setFocusPainted(false);
         searchHistorialBedroom.setFocusable(false);
         searchHistorialBedroom.addActionListener(new java.awt.event.ActionListener() {
@@ -115,10 +109,10 @@ public class MainGUI extends javax.swing.JFrame {
                 searchHistorialBedroomActionPerformed(evt);
             }
         });
-        jPanel1.add(searchHistorialBedroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 280, 30));
+        jPanel1.add(searchHistorialBedroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 280, 30));
 
         checkIn.setBackground(new java.awt.Color(144, 194, 231));
-        checkIn.setForeground(new java.awt.Color(11, 83, 81));
+        checkIn.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         checkIn.setText("ADMIN: Check-In");
         checkIn.setFocusPainted(false);
         checkIn.setFocusable(false);
@@ -127,9 +121,19 @@ public class MainGUI extends javax.swing.JFrame {
                 checkInActionPerformed(evt);
             }
         });
-        jPanel1.add(checkIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 280, 30));
+        jPanel1.add(checkIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 280, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("BOOKING HOTEL");
+        jPanel2.add(jLabel1);
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 280, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -222,6 +226,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JButton checkOut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton searchHistorialBedroom;
     private javax.swing.JButton searchHosted;
     private javax.swing.JButton searchReservation;

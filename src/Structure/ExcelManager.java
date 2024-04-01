@@ -248,7 +248,7 @@ public class ExcelManager {
                         Clientes2 u = new Clientes2(dni, name, last_name, gener, email, phone);
                         u.setRide(ride);
                         u.setDeparture(departure);
-                        Reservation r = new Reservation(u, type);
+                        Reservation2 r = new Reservation2(u, type);
                         reservaciones.addLast(r);
                     }
                 }

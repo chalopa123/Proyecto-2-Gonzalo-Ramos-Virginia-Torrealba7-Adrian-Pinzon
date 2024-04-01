@@ -73,11 +73,11 @@ public class ShowClientGUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(9, 35, 39));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 169, 165));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("INFORMACIÓN DE LA RESERVACIÓN");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 250, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 270, 30));
 
         numLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         numLabel.setForeground(new java.awt.Color(144, 194, 231));
