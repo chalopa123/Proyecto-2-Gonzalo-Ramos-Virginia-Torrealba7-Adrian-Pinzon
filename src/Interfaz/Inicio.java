@@ -5,10 +5,12 @@
 package Interfaz;
 
 
+
 /**
  *
  * @author VirginiaT
  */
+
 
 
 public class Inicio extends javax.swing.JFrame {
