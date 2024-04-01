@@ -1,19 +1,11 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-
 package Structure;
 
-
-/**
- *
- * @author Admin
- */
-
-
 import Classes.Bedroom;
-import Classes.Clientes2;
 import TreeBinario.Nodo2;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,8 +16,15 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import Classes.Clientes2;
 
 
+/**
+ *
+ * @author 
+ * 
+ * 
+ */
 public class ExcelManager {
 
     /**
@@ -658,4 +657,3 @@ public class ExcelManager {
         }
     }
 }
-

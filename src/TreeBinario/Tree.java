@@ -5,8 +5,7 @@
 package TreeBinario;
 
 import Classes.Clientes2;
-
-import Interfaz.ShowHistorial;
+import gui.ShowHistorialGUI;
 
 /**
  *
@@ -128,7 +127,7 @@ public class Tree {
             Clientes2 u = (Clientes2) root.getDato();
             
             Clientes2 user_aux = u;
-            ShowHistorial showh = new ShowHistorial(user_aux);
+            ShowHistorialGUI gui = new ShowHistorialGUI(user_aux);
             
             showHistorial(root.getDer());
         }
