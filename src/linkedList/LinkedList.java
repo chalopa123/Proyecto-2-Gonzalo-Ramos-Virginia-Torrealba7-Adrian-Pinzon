@@ -1,19 +1,20 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Structure;
+package linkedList;
 
-import Classes.Clientes2;
+import reservation.Reservation;
+import user.User;
 
 /**
+ * Represents a linked list data structure.
  *
- * @author eduardopinzon
- * @param <T>
+ * @param <T> the type of elements stored in the linked list
  */
-public class LinkedList <T> {
-    
-    
+public class LinkedList<T> {
+
     /**
      * The head node of the linked list.
      */
@@ -352,13 +353,13 @@ public class LinkedList <T> {
 
             Node pivot = getHead();
 
-            Clientes2 r = (Clientes2) pivot.getDato();
+            User r = (User) pivot.getDato();
             r.show();
             if (r.getName().toLowerCase().equals(name) && r.getLast_name().toLowerCase().equals(last_name)) {
                 setHead(null);
             } else {
                 while (pivot.getNext() != null) {
-                    r = (Clientes2) pivot.getNext().getDato();
+                    r = (User) pivot.getNext().getDato();
                     r.show();
                     if (r.getName().toLowerCase().equals(name) && r.getLast_name().toLowerCase().equals(last_name)) {
                         pivot.setNext(pivot.getNext().getNext());
@@ -429,7 +430,7 @@ public class LinkedList <T> {
     public void show() {
         Node aux = head;
         while (aux != null) {
-            Clientes2 r = (Clientes2) aux.getDato();
+            User r = (User) aux.getDato();
             r.show();
             aux = aux.next;
         }
@@ -451,7 +452,7 @@ public class LinkedList <T> {
         data2 = data2.toLowerCase();
         Node aux = head;
         while (aux != null) {
-            Clientes2 u = (Clientes2) aux.getDato();
+            User u = (User) aux.getDato();
             if (u.getName().toLowerCase().equals(data) && u.getLast_name().toLowerCase().equals(data2)) {
                 return (T) aux.getDato();
             }
@@ -511,7 +512,7 @@ public class LinkedList <T> {
     public boolean search(T data, T data2) {
         Node aux = head;
         while (aux != null) {
-            Clientes2 u = (Clientes2) aux.getDato();
+            User u = (User) aux.getDato();
             if (u.getName() == data && u.getLast_name() == data2) {
                 return true;
             }
@@ -600,6 +601,3 @@ public class LinkedList <T> {
     }
     // </editor-fold> 
 }
-
-
-

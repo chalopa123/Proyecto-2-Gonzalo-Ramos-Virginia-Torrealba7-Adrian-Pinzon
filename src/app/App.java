@@ -5,22 +5,21 @@
  */
 package app;
 
-import Classes.Bedroom;
-import TreeBinario.Tree;
-import Structure.ExcelManager;
+import bedroom.Bedroom;
+import binaryTree.Node;
+import excelManager.ExcelManager;
 import gui.MainGUI;
 import gui.ShowClientGUI;
 import gui.ShowHostedGUI;
-import Structure.HashTable;
+import hashTable.HashTable;
 import java.io.File;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import Structure.LinkedList;
-import Structure.Reservation;
-import Classes.Clientes2;
-import TreeBinario.Nodo2;
-import Utilidad.Errors;
-import Utilidad.Utils;
+import linkedList.LinkedList;
+import reservation.Reservation;
+import user.User;
+import utils.Errors;
+import utils.Utils;
 
 /**
  * The App class represents an application for managing bedrooms and
@@ -52,7 +51,7 @@ public class App {
      * property "user.dir" and points to the "database.xlsx" file located in the
      * "src/database" directory.
      */
-    private String databasePath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "database" + File.separator + "database.xlsx";
+    private String databasePath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "database" + File.separator + "Booking_hotel.xlsx";
 
     /**
      * An array of Bedroom objects representing the available bedrooms.
@@ -92,7 +91,7 @@ public class App {
             Reservation booking = (Reservation) reserv.seachBina(dni, d);
             // =================================================================
             if (booking != null) {
-                Clientes2 user_aux = booking.getUser();
+                User user_aux = booking.getUser();
                 ShowClientGUI show = new ShowClientGUI(user_aux);
 
             } else {
@@ -130,7 +129,7 @@ public class App {
             // NOTA: Para hacer el checkIn necesitamos: 
             // =================================================================
             int dni = Utils.requestDNI();
-            Clientes2 user_aux;
+            User user_aux;
             int counter;
             LinkedList d = reserv.copyList();
             // =================================================================
@@ -187,7 +186,7 @@ public class App {
             String name = Utils.requestName();
             String lastname = Utils.requestLastame();
             // =================================================================
-            Clientes2 user_aux;
+            User user_aux;
             // =================================================================
             // Buscar usuario
             user_aux = status.search(name, lastname);
@@ -207,7 +206,7 @@ public class App {
                         habs[index].setOccupied(false);
 
                         // input dni y si no esta en el arbol  (con alguno de los recorridos) a;adirlo porque los usuarios que provienen de las habitaciones (Estados) no tiene cedula 
-                        Nodo2 aux = new Nodo2(user_aux);
+                        Node aux = new Node(user_aux);
                         habs[index].getTree().insert(habs[index].getTree().getpRoot(), aux);
                         habs[index].getTree().inOrder(habs[index].getTree().getpRoot());
 
@@ -227,7 +226,7 @@ public class App {
                     habs[index].setOccupied(false);
 
                     // input dni y si no esta en el arbol  (con alguno de los recorridos) a;adirlo porque los usuarios que provienen de las habitaciones (Estados) no tiene cedula 
-                    Nodo2 aux = new Nodo2(user_aux);
+                    Node aux = new Node(user_aux);
                     habs[index].getTree().insert(habs[index].getTree().getpRoot(), aux);
                     habs[index].getTree().inOrder(habs[index].getTree().getpRoot());
 
@@ -251,7 +250,7 @@ public class App {
         try {
             String name = Utils.requestName();
             String lastname = Utils.requestLastame();
-            Clientes2 user_aux = (Clientes2) status.search(name, lastname);
+            User user_aux = (User) status.search(name, lastname);
 
             if (user_aux != null) {
                 ShowHostedGUI show = new ShowHostedGUI(user_aux);

@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Structure;
+package hashTable;
 
-import Classes.Clientes2;
+import linkedList.LinkedList;
+import user.User;
 
 /**
  * HashTable implementation using an array of LinkedLists.
@@ -17,7 +18,7 @@ public class HashTable<T> {
     /**
      * Array of LinkedLists to store the elements.
      */
-    LinkedList<Clientes2>[] table;
+    LinkedList<User>[] table;
     /**
      * Size of the HashTable.
      */
@@ -86,10 +87,10 @@ public class HashTable<T> {
      * @param value The value to insert.
      */
     public void insert(T value) {
-        Clientes2 u = (Clientes2) value;
+        User u = (User) value;
         int index = hashFunction(u.getName(), u.getLast_name());
-        LinkedList<Clientes2> list = table[index];
-        list.addLast((Clientes2) u);
+        LinkedList<User> list = table[index];
+        list.addLast((User) u);
     }
     // </editor-fold> 
 
@@ -114,13 +115,13 @@ public class HashTable<T> {
      * @param key2 The second key to search for (last name of the user).
      * @return The User object if found, or null if not found.
      */
-    public Clientes2 search(String key, String key2) {
+    public User search(String key, String key2) {
         int index = hashFunction(key, key2);
         LinkedList list = table[index];
         if (list.isEmpty()) {
             return null;
         } else {
-            return (Clientes2) list.getDato(key, key2);
+            return (User) list.getDato(key, key2);
         }
     }
     // </editor-fold> 

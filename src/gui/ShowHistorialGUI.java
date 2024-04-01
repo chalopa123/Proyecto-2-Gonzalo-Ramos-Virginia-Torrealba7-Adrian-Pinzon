@@ -6,7 +6,7 @@
 package gui;
 
 import javax.swing.JFrame;
-import Classes.Clientes2;
+import user.User;
 
 /**
  * A GUI class for displaying client information.
@@ -16,7 +16,7 @@ public class ShowHistorialGUI extends javax.swing.JFrame {
     /**
      * The client object to display information for.
      */
-    static Clientes2 client;
+    static User client;
     /**
      * The title of the GUI window.
      */
@@ -28,7 +28,7 @@ public class ShowHistorialGUI extends javax.swing.JFrame {
      *
      * @param aux
      */
-    public ShowHistorialGUI(Clientes2 aux) {
+    public ShowHistorialGUI(User aux) {
         // Ignore
         initComponents();
 

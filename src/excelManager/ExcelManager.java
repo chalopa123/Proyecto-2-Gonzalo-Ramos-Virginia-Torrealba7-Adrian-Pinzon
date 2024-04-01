@@ -3,29 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Structure;
+package excelManager;
 
-/**
- *
- * @author Admin
- */
-import Classes.Bedroom;
-import Classes.Clientes2;
-import TreeBinario.Nodo2;
+import bedroom.Bedroom;
+import binaryTree.Node;
+import hashTable.HashTable;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
+import linkedList.LinkedList;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
+import reservation.Reservation;
+import user.User;
 
 /**
  *
- * @author Daniel
+ * @author Gonzalo
  */
 public class ExcelManager {
 
@@ -247,7 +245,7 @@ public class ExcelManager {
                     }
                     if (!"".equals(type) && !"".equals(ride) && !"".equals(departure) && !"".equals(last_name)
                             && !"".equals(name) && !"".equals(gener) && !"".equals(email) && !"".equals(phone) && dni != 0) {
-                        Clientes2 u = new Clientes2(dni, name, last_name, gener, email, phone);
+                        User u = new User(dni, name, last_name, gener, email, phone);
                         u.setRide(ride);
                         u.setDeparture(departure);
                         Reservation r = new Reservation(u, type);
@@ -500,7 +498,7 @@ public class ExcelManager {
                     }
 
                     if (!"".equals(last_name) && !"".equals(name) && !"".equals(gener) && !"".equals(email) && !"".equals(phone) && num != 0 && !"".equals(ride)) {
-                        Clientes2 u = new Clientes2(name, last_name, gener, email, phone);
+                        User u = new User(name, last_name, gener, email, phone);
                         u.setRide(ride);
                         u.setNum(num);
                         habs[num - 1].setOccupied(true);
@@ -648,10 +646,10 @@ public class ExcelManager {
                     }
 
                     if (dni != 0 && !"".equals(last_name) && !"".equals(name) && !"".equals(gener) && !"".equals(email) && num != 0 && !"".equals(ride)) {
-                        Clientes2 u = new Clientes2(dni, name, last_name, gener, email, phone);
+                        User u = new User(dni, name, last_name, gener, email, phone);
                         u.setRide(ride);
                         u.setNum(num);
-                        Nodo2 aux = new Nodo2(u);
+                        Node aux = new Node(u);
                         habs[num - 1].getTree().insert(habs[num - 1].getTree().getpRoot(), aux);
                     }
                 }

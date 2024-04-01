@@ -1,21 +1,21 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Structure;
+package reservation;
 
-import Classes.Clientes2;
+import user.User;
 
 /**
- *
- * @author eduardopinzon
+ * Represents a reservation with user information and room type.
  */
 public class Reservation {
-    
+
     /**
      * User information of the reservation.
      */
-    private Clientes2 user;
+    private User user;
     /**
      * Type of the room: Simple, double, triple, suite.
      */
@@ -28,7 +28,7 @@ public class Reservation {
      * @param user the user associated with the reservation
      * @param type the type of the room
      */
-    public Reservation(Clientes2 user, String type) {
+    public Reservation(User user, String type) {
         this.user = user;
         this.type = type;
     }
@@ -40,7 +40,7 @@ public class Reservation {
      *
      * @return the user associated with the reservation
      */
-    public Clientes2 getUser() {
+    public User getUser() {
         return user;
     }
 
@@ -49,7 +49,7 @@ public class Reservation {
      *
      * @param user the user to set
      */
-    public void setUser(Clientes2 user) {
+    public void setUser(User user) {
         this.user = user;
     }
     // </editor-fold>  

@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Utilidad;
+package utils;
 
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Admin
+ * Utility class for displaying error messages.
  */
 public class Errors {
-     /**
+
+    /**
      * Displays an error message for invalid input.
      */
     public static void invalidInput() {
