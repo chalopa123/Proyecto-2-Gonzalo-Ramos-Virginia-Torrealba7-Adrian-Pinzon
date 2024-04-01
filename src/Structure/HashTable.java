@@ -7,16 +7,13 @@ package Structure;
 import Classes.Clients;
 
 
-//[0 ->
-//1 ->
-//2 -> Andres
-//3 ->
-//
-//]
+
 /**
  *
  * @author eduardopinzon
  */
+
+
 public class HashTable {
     
     LinkedList[] Data;
@@ -58,7 +55,7 @@ public class HashTable {
         this.Data[indexx].Eliminar(name, last_name);       
     }
     
-    public Clients Search (String name, String last_name){
+    public Clients Search(String name, String last_name){
         int indexx = this.Hash(name, last_name);
         return this.Data[indexx].Search(name, last_name);
     }

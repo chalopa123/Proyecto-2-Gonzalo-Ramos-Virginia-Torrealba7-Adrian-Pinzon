@@ -100,7 +100,7 @@ public class Tree {
     public void inOrder(Nodo2 root) {
         if (root != null) {
             inOrder(root.getIzq());
-            Clientes2 c = (Clientes2) root.getDato();
+            Clientes2 u = (Clientes2) root.getDato();
             inOrder(root.getDer());
         }
     }

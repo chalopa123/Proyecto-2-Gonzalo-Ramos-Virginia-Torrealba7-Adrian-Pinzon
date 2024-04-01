@@ -18,7 +18,7 @@ import java.io.File;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import Structure.LinkedList;
-import Structure.Reservation;
+import Structure.Reservation2;
 import Classes.Clientes2;
 import Utilidad.Errors;
 import Utilidad.Utils;
@@ -83,7 +83,7 @@ public class App {
             int dni = Utils.requestDNI();
             // =================================================================
             LinkedList d = reserv.copyList();
-            Reservation booking = (Reservation) reserv.seachBina(dni, d);
+            Reservation2 booking = (Reservation2) reserv.seachBina(dni, d);
             // =================================================================
             if (booking != null) {
                 Clientes2 user_aux = booking.getClientes2();
@@ -131,7 +131,7 @@ public class App {
             // Buscar según el DNI, la reservación
             user_aux = null;
             counter = 0;
-            Reservation booking = (Reservation) reserv.seachBina(dni, d);
+            Reservation2 booking = (Reservation2) reserv.seachBina(dni, d);
 
             if (booking != null) {
                 // =============================================================

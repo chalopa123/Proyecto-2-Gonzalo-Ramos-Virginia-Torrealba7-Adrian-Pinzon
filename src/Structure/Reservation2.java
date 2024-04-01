@@ -13,7 +13,7 @@ package Structure;
 import Classes.Clientes2;
 
 
-public class Resevation2 {
+public class Reservation2 {
     
     /**
  * Represents a reservation with user information and room type.
@@ -26,17 +26,24 @@ public class Resevation2 {
      */
     private String type;
 
-    // <editor-fold defaultstate="collapsed" desc="Constructor">   
-    /**
+
+
+
+ /**
      * Constructs a new Reservation object.
      *
      * @param clientes2 the user associated with the reservation
      * @param type the type of the room
      */
-    public Reservation(Clientes2 clientes2, String type) {
+
+
+    public Reservation2(Clientes2 clientes2, String type) {
         this.clientes2 = clientes2;
         this.type = type;
     }
+
+
+   
     // </editor-fold>  
 
     // <editor-fold defaultstate="collapsed" desc="User">   
@@ -101,4 +108,6 @@ public class Resevation2 {
     }
     // </editor-fold> 
 }
+
+
 

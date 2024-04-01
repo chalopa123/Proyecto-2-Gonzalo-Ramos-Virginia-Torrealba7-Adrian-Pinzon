@@ -10,6 +10,7 @@ import Classes.Clients;
  *
  * @author eduardopinzon
  */
+
 public class LinkedList {
     
     Clients primero;
